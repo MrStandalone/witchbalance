@@ -37,19 +37,6 @@ public OnPluginStart()
     
     wb_witchDamage = CreateConVar("wb_witchdamage", "30", "Set the perm health loss per witch incap.");
     wb_bufferThreshold = CreateConVar("wb_bufferthreshold", "0", "Set a temp health buffer for when players are revived after a witch incap that they would have survived.");
-    
-    RegConsoleCmd("test_command", Command_Test);
-}
-
-public Action:Command_Test(client, args)
-{
-    new health = GetClientHealth(client);
-    new buffer = GetCurrentBufferHealth(client);
-    
-    PrintToChatAll("client health: %i", health);
-    PrintToChatAll("client buffer health: %i", buffer);
-    
-    return Plugin_Handled;
 }
 
 public Action:Event_PlayerIncapacitatedStart(Handle:event, const String:name[], bool:dontBroadcast) 
