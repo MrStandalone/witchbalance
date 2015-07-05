@@ -1,8 +1,8 @@
 # Witch Balance
-This is a sourcemod plugin concept for Left 4 Dead 2 thought up by High Cookie to try and balance the Witch in ProMod.
+This is a sourcemod plugin concept for Left 4 Dead 2 thought up by High Cookie to try and balance the Witch in competitive play.
 
 ## Specifics
-Originally whenever a player is revived after being downed by a witch, they are revived at 1 health and 29 temporary buffer health which slowly degrades over time, in ProMod this immediately removes a large portion of the bonus points from health that are available to that team without any input required by the enemy team, this plugin aims to change that.
+Originally whenever a player is revived after being downed by a witch, they are revived at 1 health and 29 temporary buffer health which slowly degrades over time, in most competitive modes this immediately removes a large portion of the bonus points from health that are available to that team without any input required by the enemy team, this plugin aims to change that.
 
 There are 2 cvars available to customise this plugin:
 * **wb_witchdamage** - *Default: 30* This sets the amount of health lost on revival after being downed by a witch, if this is set to 100, then the witch incap will act as normal (unless the player somehow has more than 100 health at the time of incap due to shady reasons)
