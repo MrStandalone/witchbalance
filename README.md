@@ -14,5 +14,3 @@ If the players total health is not greater than the witch damage, then the incap
 
 ##Possible Issues
 I'm not experienced with SourcePawn or SourceMod coding, so there will undoubtedly be many changes that need to be made.
-
-* Not getting the current temp buffer health correctly when calculating the health to revive the survivor at, need to find out if the damage the witch does to downed players removes perm health first and then temp health and if it changes the maximum buffer health the player has, will do this soon unless somenone else knows.
