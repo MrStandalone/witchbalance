@@ -95,18 +95,9 @@ public Action:Event_ReviveSuccess(Handle:event, const String:name[], bool:dontBr
         
         if ((health + buffer) > witchdamage) {
             if (health < witchdamage) {
-                //PrintToChatAll("health = %i", health);
-                //PrintToChatAll("buffer = %i", buffer);
-                //PrintToChatAll("revivehp = %i", revivehp);
-                //PrintToChatAll("currentbuffer = %i", currentbuffer);
                 buffer = RoundToFloor(float(buffer - (witchdamage - health)) * ((revivehp + currentbuffer) / (300.0 + buffer)));
-                //PrintToChatAll("buffer after calc = %i", buffer);
                 health = 1;
             } else {
-                //PrintToChatAll("health = %i", health);
-                //PrintToChatAll("buffer = %i", buffer);
-                //PrintToChatAll("revivehp = %i", revivehp);
-                //PrintToChatAll("currentbuffer = %i", currentbuffer);
                 health = health - witchdamage;
                 //I've got float() around most shit here because weird shit was happening without it, not sure how int/float operations work in pawn.
                 bleedout = RoundToFloor(float(health+buffer) - (float(health+buffer) * (revivehp / (300.0 + buffer))));
