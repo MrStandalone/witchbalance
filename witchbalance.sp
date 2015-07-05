@@ -5,7 +5,7 @@ public Plugin:myinfo =
     name = "Cookie's Witch Balance",
     author = "High Cookie & Standalone(aka Manu)",
     description = "A Witch balance plugin, still needs a little bit of work.",
-    version = "1.2",
+    version = "1.01",
     url = ""
 };
 
