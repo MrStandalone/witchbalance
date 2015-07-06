@@ -5,7 +5,7 @@ public Plugin:myinfo =
     name = "Cookie's Witch Balance",
     author = "High Cookie & Standalone(aka Manu)",
     description = "A Witch balance plugin, still needs a little bit of work.",
-    version = "1.0.1",
+    version = "1.0.2",
     url = ""
 };
 
@@ -134,9 +134,8 @@ public Action:Event_PlayerDeath(Handle:event, const String:name[], bool:dontBroa
     decl String:str_victim[16]
     IntToString(victim, str_victim, sizeof(str_victim));
     new values[4];
-    new client = GetClientOfUserId(victim);
 
-    if ((GetClientTeam(client) == 2) && GetTrieArray(PlayersDownedTrie, str_victim, values, 4)) {
+    if (GetTrieArray(PlayersDownedTrie, str_victim, values, 4)) {
         RemoveFromTrie(PlayersDownedTrie, str_victim);
     }
 }
