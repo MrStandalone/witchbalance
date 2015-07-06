@@ -6,7 +6,7 @@ Originally whenever a player is revived after being downed by a witch, they are 
 
 There are 2 cvars available to customise this plugin:
 * **wb_witchdamage** - *Default: 30* This sets the amount of health lost on revival after being downed by a witch, if this is set to 100, then the witch incap will act as normal (unless the player somehow has more than 100 health at the time of incap due to shady reasons)
-* **wb_bufferthreshold** - *Default: 0* This sets the minimum amount of health a survivor can have after being revived, if they have 10 health then they will be given temporary buffer health to bring them up to the buffer threshold.
+* **wb_bufferthreshold** - *Default: 0* This sets the minimum amount of health a survivor can have after being revived, eg. if wb_bufferthreshold is set to 30 and a player is to be revived with 10 perm health then they will be given 20 temp health to bring their total health up to 30.
 
 Whenever a player that was downed by a witch is revived, we check to see if the total health the player had (health + temp buffer) can survive the witch damage, if the player can survive then we remove the witch damage from their total health prioritising permanent health first and then buffer health and the incap does not count to the total incaps.
 
