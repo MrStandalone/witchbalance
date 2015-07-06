@@ -136,7 +136,7 @@ public Action:Event_PlayerDeath(Handle:event, const String:name[], bool:dontBroa
     new values[4];
     new client = GetClientOfUserId(victim);
 
-    if ((GetClientTeam(client) == 2) && GetTrieArray(PlayersDownedTrie, str_victim, values, 4)) {
+    if (GetTrieArray(PlayersDownedTrie, str_victim, values, 4)) {
         RemoveFromTrie(PlayersDownedTrie, str_victim);
     }
 }
