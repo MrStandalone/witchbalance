@@ -3,7 +3,7 @@
 
 public Plugin:myinfo = 
 {
-    name = "Cookie's Witch Balance",
+    name = "Witch Balance",
     author = "High Cookie & Standalone(aka Manu)",
     description = "A Witch balance plugin, still needs a little bit of work.",
     version = "1.1.0",
@@ -53,7 +53,7 @@ public Action:Event_PlayerIncapacitatedStart(Handle:event, const String:name[], 
         decl String:str_userid[16];
         IntToString(userid, str_userid, sizeof(str_userid));
         new client = GetClientOfUserId(userid);
-        new announcemode     = GetConVarInt(wb_announceMode);
+        new announcemode = GetConVarInt(wb_announceMode);
         decl String:clientname[32]
         GetClientName(client, clientname, sizeof(clientname));
         
